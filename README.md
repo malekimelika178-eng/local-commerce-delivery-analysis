@@ -33,3 +33,6 @@ Validate customer demand, retailer willingness to prepare orders for third-party
 - `Local_Commerce_Analysis_Workbook.xlsx` — Excel workbook with source-data tabs, KPI definitions, summary tables, and built-in charts.
 - `tableau/` — CSVs and a Tableau setup guide for building a Tableau dashboard.
 - `Lucidchart_Process_Flow.svg` — workflow diagram that can be imported or used as a reference in Lucidchart.
+- ## Customer App Prototype
+
+[Launch the LOCAL Shopping App](Local_Commerce_Customer_App_Prototype.html)
