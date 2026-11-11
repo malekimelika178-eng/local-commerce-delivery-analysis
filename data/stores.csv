@@ -1,0 +1,13 @@
+store_id,store_name,shopping_zone,category
+S01,Nordstrom,Fashion Valley,Department store
+S02,Sephora,Fashion Valley,Beauty
+S03,Zara,Fashion Valley,Apparel
+S04,Apple,Fashion Valley,Electronics
+S05,Macy's,Fashion Valley,Department store
+S06,Target,Mission Valley,General merchandise
+S07,Trader Joe's,Mission Valley,Grocery
+S08,CVS,Mission Valley,Pharmacy
+S09,Whole Foods,La Jolla,Grocery
+S10,Lululemon,UTC,Apparel
+S11,Ulta Beauty,UTC,Beauty
+S12,Best Buy,UTC,Electronics

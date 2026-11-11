@@ -1,0 +1,45 @@
+{
+  "metrics": {
+    "total_orders": 400,
+    "delivered_orders": 365,
+    "completion_rate": 91.2,
+    "avg_delivery_fee": 7.5,
+    "avg_route_miles": 3.1,
+    "avg_total_minutes": 61.0,
+    "on_time_rate": 84.4
+  },
+  "zones": {
+    "Fashion Valley": {
+      "orders": 123,
+      "completion": 92.7,
+      "avg_miles": 3.1
+    },
+    "Mission Valley": {
+      "orders": 149,
+      "completion": 89.9,
+      "avg_miles": 3.1
+    },
+    "UTC": {
+      "orders": 128,
+      "completion": 91.4,
+      "avg_miles": 3.0
+    }
+  },
+  "stops": {
+    "1": {
+      "orders": 213,
+      "avg_minutes": 61.0,
+      "issue_rate": 8.0
+    },
+    "2": {
+      "orders": 141,
+      "avg_minutes": 60.7,
+      "issue_rate": 10.6
+    },
+    "3": {
+      "orders": 46,
+      "avg_minutes": 62.1,
+      "issue_rate": 6.5
+    }
+  }
+}

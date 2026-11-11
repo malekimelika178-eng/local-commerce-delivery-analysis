@@ -1,0 +1,26 @@
+partner_id,partner_label,transport_mode,status
+P001,Partner 01,Scooter,Active
+P002,Partner 02,Bicycle,Active
+P003,Partner 03,Bicycle,Active
+P004,Partner 04,Bicycle,Active
+P005,Partner 05,Bicycle,Active
+P006,Partner 06,Car,Active
+P007,Partner 07,Scooter,Active
+P008,Partner 08,Scooter,Active
+P009,Partner 09,Scooter,Active
+P010,Partner 10,Scooter,Active
+P011,Partner 11,Bicycle,Active
+P012,Partner 12,Car,Active
+P013,Partner 13,Car,Active
+P014,Partner 14,Car,Active
+P015,Partner 15,Bicycle,Active
+P016,Partner 16,Scooter,Active
+P017,Partner 17,Bicycle,Active
+P018,Partner 18,Bicycle,Active
+P019,Partner 19,Scooter,Active
+P020,Partner 20,Bicycle,Active
+P021,Partner 21,Scooter,Active
+P022,Partner 22,Scooter,Active
+P023,Partner 23,Scooter,Active
+P024,Partner 24,Bicycle,Active
+P025,Partner 25,Car,Active

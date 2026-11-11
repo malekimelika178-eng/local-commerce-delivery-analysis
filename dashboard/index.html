@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local Commerce Delivery Dashboard</title>
+<style>
+body{margin:0;background:#f4f6fa;color:#202938;font:15px Arial,sans-serif}header{background:#17243d;color:white;padding:26px max(20px,calc((100% - 1100px)/2))}header h1{margin:0 0 6px;font-size:25px}header p{margin:0;color:#d7dfed}main{max-width:1100px;margin:24px auto;padding:0 18px}.note{background:#fff5d9;border:1px solid #ebd99d;border-radius:9px;padding:12px;margin-bottom:16px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:white;border:1px solid #e4e8ef;border-radius:11px;padding:17px;margin-bottom:14px}.metric small{color:#687386}.metric strong{display:block;font-size:26px;margin-top:8px}.charts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.bar{display:grid;grid-template-columns:120px 1fr 55px;gap:9px;align-items:center;margin:14px 0;font-size:13px}.track{height:11px;background:#edf0f5;border-radius:20px;overflow:hidden}.fill{height:100%;background:#3859a6}h2{font-size:19px;margin:24px 0 12px}h3{font-size:16px;margin:0 0 12px}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:10px;border-bottom:1px solid #e7eaf0}th{color:#687386}@media(max-width:720px){.grid{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}.bar{grid-template-columns:105px 1fr 48px}}
+</style></head><body><header><h1>Local Commerce & Flexible Delivery</h1><p>Business Analyst portfolio · Operations dashboard</p></header><main>
+<div class="note"><b>Data notice:</b> All figures are simulated sample data for demonstrating analysis. They are not actual company results, customer research, or market benchmarks.</div>
+<div class="grid" id="metrics"></div><h2>Performance by shopping zone</h2><div class="charts">
+<section class="card"><h3>Order volume</h3><div id="zoneOrders"></div></section><section class="card"><h3>Completion rate</h3><div id="zoneCompletion"></div></section>
+<section class="card"><h3>Average order cycle by pickup count</h3><div id="stopTime"></div></section><section class="card"><h3>Order issue rate by pickup count</h3><div id="stopIssues"></div></section></div>
+<h2>Business questions to investigate</h2><section class="card"><table><tr><th>Question</th><th>Why it matters</th></tr>
+<tr><td>Do multi-store orders take longer?</td><td>Tests whether pickup grouping is efficient or creates delays.</td></tr>
+<tr><td>Are packages ready before partners arrive?</td><td>Store readiness is essential to quick delivery.</td></tr>
+<tr><td>Does distance explain delivery fees?</td><td>Supports transparent, defensible pricing.</td></tr>
+<tr><td>Which zones have the most failed orders?</td><td>Shows where operations need improvement.</td></tr></table></section>
+<p style="font-size:12px;color:#687386">Portfolio prototype. Replace simulated data with verified pilot data before making business claims.</p></main>
+<script>
+fetch('dashboard_data.json').then(r=>r.json()).then(d=>{
+let m=d.metrics;let cards=[['Total orders',m.total_orders],['Completion rate',m.completion_rate+'%'],['Average delivery fee','$'+m.avg_delivery_fee.toFixed(2)],['Average route distance',m.avg_route_miles+' mi'],['Average order cycle',m.avg_total_minutes+' min'],['On-time rate',m.on_time_rate+'%'],['Delivered orders',m.delivered_orders],['Sample dataset','Aug–Oct 2026']];
+document.getElementById('metrics').innerHTML=cards.map(c=>`<div class="card metric"><small>${c[0]}</small><strong>${c[1]}</strong></div>`).join('');
+function bars(obj,key,suffix,max){return Object.entries(obj).map(([n,v])=>`<div class="bar"><span>${n}</span><div class="track"><div class="fill" style="width:${Math.max(2,100*v[key]/max)}%"></div></div><b>${v[key]}${suffix}</b></div>`).join('')}
+document.getElementById('zoneOrders').innerHTML=bars(d.zones,'orders','',Math.max(...Object.values(d.zones).map(x=>x.orders)));
+document.getElementById('zoneCompletion').innerHTML=bars(d.zones,'completion','%',100);
+document.getElementById('stopTime').innerHTML=bars(d.stops,'avg_minutes',' min',Math.max(...Object.values(d.stops).map(x=>x.avg_minutes)));
+document.getElementById('stopIssues').innerHTML=bars(d.stops,'issue_rate','%',100);
+});</script></body></html>

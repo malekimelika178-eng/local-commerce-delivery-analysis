@@ -1,0 +1,4 @@
+store_stop_count,orders,avg_order_cycle_minutes,issue_rate_pct
+1,213,61.0,8.0
+2,141,60.7,10.6
+3,46,62.1,6.5
