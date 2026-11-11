@@ -1,0 +1,13 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=dashboard/">
+    <title>Local Commerce Delivery Analysis</title>
+</head>
+<body>
+    <p>Opening the project dashboard...</p>
+    <a href="dashboard/">View Dashboard</a>
+</body>
+</html>
